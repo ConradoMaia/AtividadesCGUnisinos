@@ -1,14 +1,21 @@
 #version 330 core
-layout (location = 0) in vec3 aPos;         // Posição do vértice (x, y, z)
-layout (location = 1) in vec2 aTexCoord;    // Coordenada de textura (s, t)
+layout (location = 0) in vec3 aPos;
+layout (location = 1) in vec2 aTexCoord;
+layout (location = 2) in vec3 aNormal;
 
-out vec2 TexCoord;                          // Passa a coordenada de textura para o Fragment Shader
+out vec2 TexCoord;
+out vec3 Normal;
+out vec3 FragPos;
 
-uniform mat4 model;                         // Matriz de modelo para transformações do objeto
-uniform mat4 projection;                    // Matriz de projeção (câmera)
+uniform mat4 model;
+uniform mat4 view;
+uniform mat4 projection;
 
 void main()
 {
-    gl_Position = projection * model * vec4(aPos, 1.0); // Calcula a posição final do vértice
-    TexCoord = aTexCoord;                               // Passa a coordenada de textura
+    FragPos = vec3(model * vec4(aPos, 1.0));
+    Normal = mat3(transpose(inverse(model))) * aNormal;
+    
+    gl_Position = projection * view * model * vec4(aPos, 1.0);
+    TexCoord = aTexCoord;
 }
