@@ -82,6 +82,7 @@ foreach(EXERCISE ${EXERCISES})
                    src/${EXERCISE}.cpp  # O arquivo principal do executável
                    ${GLAD_C_FILE}       # glad.c
                    ${COMMON_PROJECT_SOURCES}
+    )
     target_include_directories(${EXERCISE} PRIVATE 
                                ${CMAKE_SOURCE_DIR}/include/glad 
                                ${CMAKE_SOURCE_DIR}/common # Para encontrar os .h dos arquivos common/src
