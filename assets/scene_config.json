@@ -11,8 +11,8 @@
   "light_sources": [
     {
       "position": [1.0, 1.0, 1.0],
-      "ambient": [0.1, 0.1, 0.1],
-      "diffuse": [0.8, 0.8, 0.8],
+      "ambient": [0.3, 0.3, 0.3],  
+      "diffuse": [1.0, 1.0, 1.0],
       "specular": [1.0, 1.0, 1.0],
       "intensity": 1.0
     }
@@ -64,6 +64,36 @@
         ],
         "speed": 0.008,
         "follow_trajectory": true
+      }
+    },
+    {
+      "name": "Carro",
+      "obj_path": "Modelos3D/Carro.obj",
+      "mtl_path": "Modelos3D/Cube.mtl",
+      "texture_path": "tex/pixelWall.png",
+      "initial_transform": {
+        "position": [0.0, 0.0, -1.0],
+        "rotation_angle": 0.0,
+        "rotation_axis": [0.0, 1.0, 0.0],
+        "scale": 1.0 
+      },
+      "animation": {
+        "type": "none"
+      }
+    },
+    {
+      "name": "Arvore",
+      "obj_path": "Modelos3D/DeadTree.obj",
+      "mtl_path": "Modelos3D/DeadTree.mtl",
+      "texture_path": "tex/7.png",
+      "initial_transform": {
+        "position": [0.0, 0.0, -1.0],
+        "rotation_angle": 0.0,
+        "rotation_axis": [0.0, 1.0, 0.0],
+        "scale": 1.0 
+      },
+      "animation": {
+        "type": "none"
       }
     }
   ]
