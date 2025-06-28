@@ -70,7 +70,7 @@
       "name": "Carro",
       "obj_path": "Modelos3D/Carro.obj",
       "mtl_path": "Modelos3D/Cube.mtl",
-      "texture_path": "tex/pixelWall.png",
+      "texture_path": "tex/1.png",
       "initial_transform": {
         "position": [0.0, 0.0, -1.0],
         "rotation_angle": 0.0,
