@@ -253,7 +253,7 @@ void setupWindow(GLFWwindow*& window) {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Scene Viewer - Conrado Maia Heckler", nullptr, nullptr);
+    window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Atividade GB - Conrado Maia Heckler", nullptr, nullptr);
     glfwMakeContextCurrent(window);
 
     glfwSetKeyCallback(window, key_callback);
